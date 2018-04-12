@@ -11,43 +11,25 @@ class Words:
     def loadWords(self):
         print "Loading word list from file..."
         
-        inFile = open(self.fileName, 'r', 0)
-        
+        inFile = open(self.fileName, 'r', 0)        
         line = inFile.readline()
         
         self.wordlist = string.split(line)
         print "  ", len(self.wordlist), "words loaded."
+        
         return random.choice(self.wordlist)
 
 
     def isWordGuessed(self, secretWord, lettersGuessed):
-        secretLetters = []
-
-    #    for letter in secretWord:
-    #        if letter in secretLetters:
-    #            secretLetters.append(letter)
-    #        else:
-    #            pass
-
         for letter in secretWord:
             if letter in lettersGuessed:
                 pass
             else:
                 return False
-
         return True
 
     def getGuessedWord(self):
-
-        guessed = ''
-
-
-        return guessed
+        return ''
 
     def getAvailableLetters(self):
-        import string
-        # 'abcdefghijklmnopqrstuvwxyz'
-        available = string.ascii_lowercase
-
-
-        return available
+        return string.ascii_lowercase
