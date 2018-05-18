@@ -6,10 +6,10 @@ class Words:
     
     def __init__(self, fileName):
         self.fileName = fileName
-        self.loadWords()
-        self.secretWord = self.loadWords().lower()
+        self.__loadWords()
+        self.secretWord = self.__loadWords().lower()
 
-    def loadWords(self):
+    def __loadWords(self):
         print "Loading word list from file..."
         
         inFile = open(self.fileName, 'r', 0)        

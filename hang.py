@@ -3,10 +3,10 @@ import string
 from words import Words
 from hangman import Hangman
 
-WORDLIST_FILENAME = "palavras.txt"
 
 def main():
-    words = Words(WORDLIST_FILENAME)
+    __WORDLIST_FILENAME = "palavras.txt"
+    words = Words(__WORDLIST_FILENAME)
     hangman = Hangman(words)
     
     hangman.start()
