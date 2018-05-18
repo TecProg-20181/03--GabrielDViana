@@ -14,8 +14,8 @@ class Hangman:
         print 'Welcome to the game, Hangam!'
         print 'I am thinking of a word that is', len(self.__words.secretWord), ' letters long.'
         print '-------------'
-        
-    def game(self, words):
+
+    def game(self):
         print 'You have ', self.guesses, 'guesses left.'
 
         self.__getAvailable()
@@ -25,7 +25,7 @@ class Hangman:
             self.__getGuessed()
 
             print 'Oops! You have already guessed that letter: ', self.guesses
-        elif letter in self.words.secretWord:
+        elif letter in self.__words.secretWord:
             self.lettersGuessed.append(letter)
             self.__getGuessed()
 
